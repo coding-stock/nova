@@ -1,0 +1,19 @@
+
+.header{
+    background: linear-gradient(to bottom , rgb(14, 14, 22) , #1D2951);
+}
+.tagline{
+    position: relative;
+    padding-left:1rem;
+    margin-bottom: 20px;
+}
+.tagline::after{
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: cyan;
+    top: 12;
+    left: 5;
+    border-radius: 50%;
+}
