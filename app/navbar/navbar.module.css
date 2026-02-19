@@ -64,6 +64,7 @@
 }
 .nav{
     animation: navbar 0.7s ease-in-out;
+    z-index: 10;
 }
 @keyframes navbar {
     from{
