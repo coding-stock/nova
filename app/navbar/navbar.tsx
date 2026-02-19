@@ -11,7 +11,7 @@ function Navbar() {
   return (
     <header className={clsx(styles.header , spaceGrotesk.className, 'p-5  flex flex-col justify-between' )}>
     <nav className={clsx(styles.nav, ' rounded-xl fixed m-3 top-0 left-0 right-0','h-16','p-3','flex' , 'justify-between border-2 border-white/20', 'text-white', 'bg-black', 'backdrop-blur-md',  'p-4', 'flex', 'items-center', )}>
-      <div className='align-middle pt-3'>
+      <div className='align-middle'>
         <Image src={logo} alt="logo" width={100}/>
       </div>
       <div className={clsx('hidden sm:flex' , 'flex' , 'gap-5 flex-wrap' )}>
