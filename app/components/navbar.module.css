@@ -1,4 +1,3 @@
-
 .header{
     background: linear-gradient(to bottom , rgb(14, 14, 22) , #1D2951);
 }
@@ -6,6 +5,7 @@
     position: relative;
     padding-left:1rem;
     margin-bottom: 20px;
+
 }
 .tagline::after{
     content: "";
@@ -16,4 +16,25 @@
     top: 12;
     left: 5;
     border-radius: 50%;
+}
+.tabsContainer{
+  background-color: black;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  color: white; 
+}
+.close{
+    align-self: flex-start;
+    margin-right: 3rem;
+    margin-top: 1rem;
+}
+.tabs{
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    margin: 30px;
 }

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import logo from '../../public/assets/Logo.png'
-import menu from '../../public/assets/menu.png'
 import clsx  from 'clsx'
 import Link from 'next/link'
 import styles from './navbar.module.css'
+import Menu from './menu';
 import { Space_Grotesk } from 'next/font/google'
 
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] , weight: ['400', '500', '700'] })
@@ -11,7 +11,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] , weight: ['400', '500',
 function Navbar() {
   return (
     <header className={clsx(styles.header , spaceGrotesk.className, 'p-5  flex flex-col justify-between' )}>
-    <nav className={clsx('rounded-xl','h-16','p-3','flex' , 'justify-between border-2 border-white/20', 'text-white', 'bg-black', 'backdrop-blur-md',  'p-4', 'flex', 'items-center', )}>
+    <nav className={clsx(styles.nav, 'rounded-xl','h-16','p-3','flex' , 'justify-between border-2 border-white/20', 'text-white', 'bg-black', 'backdrop-blur-md',  'p-4', 'flex', 'items-center', )}>
       <div className='align-middle pt-3'>
         <Image src={logo} alt="logo" width={100}/>
       </div>
@@ -22,7 +22,7 @@ function Navbar() {
          <Link href={"/"}>Projects</Link>
       </div>
       <div className='sm:hidden'>
-         <Image   src={menu} alt='menu' width={40}/>
+         <Menu/>
       </div>
     </nav>
      <section className='text-center flex flex-col items-center mt-40'>
