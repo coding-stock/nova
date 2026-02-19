@@ -5,13 +5,12 @@ import Link from 'next/link'
 import styles from './navbar.module.css'
 import Menu from './menu';
 import { Space_Grotesk } from 'next/font/google'
-
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] , weight: ['400', '500', '700'] })
 
 function Navbar() {
   return (
     <header className={clsx(styles.header , spaceGrotesk.className, 'p-5  flex flex-col justify-between' )}>
-    <nav className={clsx(styles.nav, 'rounded-xl','h-16','p-3','flex' , 'justify-between border-2 border-white/20', 'text-white', 'bg-black', 'backdrop-blur-md',  'p-4', 'flex', 'items-center', )}>
+    <nav className={clsx(styles.nav, ' rounded-xl fixed w-[92%]','h-16','p-3','flex' , 'justify-between border-2 border-white/20', 'text-white', 'bg-black', 'backdrop-blur-md',  'p-4', 'flex', 'items-center', )}>
       <div className='align-middle pt-3'>
         <Image src={logo} alt="logo" width={100}/>
       </div>
@@ -25,10 +24,14 @@ function Navbar() {
          <Menu/>
       </div>
     </nav>
-     <section className='text-center flex flex-col items-center mt-40'>
+     <section className={clsx( styles.hero ,'text-center flex flex-col items-center mt-40')}>
         <div className={clsx(styles.tagline ,"text-white bg-white/10 w-fit backdrop-blur-sm p-2 rounded-xl")}><p className='text-[10px]'>AVALAIBLE FOR NEW PROJECTS</p></div>
         <div className='w-full  lg:w-3/4'> <h1 className='text-white text-4xl md:text-7xl  font-bold'>We Build Digital <span className='text-cyan-400'>Experiences That Shine.</span></h1></div>
         <div><p className='text-white/50 w-90 md:w-[30.5rem] text-sm'>Blending technology and visual storytelling to create future-ready digital solutions that elevate your brand to new heights.</p></div>
+        <div className='m-5'>
+          <Link href={'/'}><button className='cursor-pointer bg-sky-400 p-2 text-white font-bold rounded-xl mr-2'>View Our Work</button></Link>
+          <Link href={'/'}><button className='cursor-pointer border-2 border-white/20 p-2 text-white font-bold rounded-xl mr-2'>Start a Project</button></Link>
+        </div>
      </section>
     </header>
   )

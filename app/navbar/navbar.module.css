@@ -1,5 +1,5 @@
 .header{
-    background: linear-gradient(to bottom , rgb(14, 14, 22) , #1D2951);
+    background-color: #0e0e16 ;
 }
 .tagline{
     position: relative;
@@ -37,4 +37,37 @@
     flex-direction: column;
     font-size: 3rem;
     margin: 30px;
+}
+.hero{
+    position: relative;
+    z-index: 2;
+    animation: run 0.7s ease-in-out;
+}
+.hero::after{
+    content: "";
+    width: 20rem;
+    height: 10rem;
+    background-color: rgba(15, 182, 248, 0.403);
+    position: absolute;
+    top: 50;
+    z-index: -1;
+    filter: blur(50px);
+}
+@keyframes run {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.nav{
+    animation: navbar 0.7s ease-in-out;
+}
+@keyframes navbar {
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
 }
