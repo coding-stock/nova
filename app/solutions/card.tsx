@@ -18,7 +18,7 @@ function Card({ image, title , des}: CardProps) {
         className={styles.solution_icon}
       />
       <h2 className="text-xl font-bold">{title}</h2>
-      <p className="mt-2 text-gray-600">{des}</p>
+      <p className="mt-2 text-foreground/50">{des}</p>
     </div>
   )
 }

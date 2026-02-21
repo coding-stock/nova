@@ -1,5 +1,6 @@
 .header{
-    background-color: #0e0e16 ;
+    background-color: var(--bg-color) ;
+    
 }
 .tagline{
     position: relative;
@@ -12,20 +13,20 @@
     position: absolute;
     width: 7px;
     height: 7px;
-    background-color: cyan;
+    background-color: var(--main-color);
     top: 12;
     left: 5;
     border-radius: 50%;
 }
 .tabsContainer{
-  background-color: black;
+  background-color: var(--bg-color);
   position: fixed;  
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 999;
-  color: white; 
+  color: var(--text-color); 
 }
 .close{
     align-self: flex-start;
@@ -47,7 +48,8 @@
     content: "";
     width: 20rem;
     height: 10rem;
-    background-color: rgba(15, 182, 248, 0.403);
+    background-color: var(--main-color);
+    opacity: 0.4;
     position: absolute;
     top: 50;
     z-index: -1;
@@ -65,6 +67,7 @@
 .nav{
     animation: navbar 0.7s ease-in-out;
     z-index: 10;
+    color: var(--text-color);
 }
 @keyframes navbar {
     from{

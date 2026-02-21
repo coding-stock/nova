@@ -44,10 +44,10 @@ function Solutions() {
     <section className={clsx( styles.solutions  , spaceGrotesk.className)}>
      <Image src={divider} alt='divider' className='w-screen' />
      <div className={clsx('p-3 mt-30' )} >
-      <p className='text-cyan-400 text-sm font-bold'>OUR EXPERTISE</p>
+      <p className='text-main-color text-sm font-bold'>OUR EXPERTISE</p>
       <aside className={clsx('flex justify-between flex-col md:flex-row ' , styles.solution_body)}>
-      <h1 className='text-white font-extrabold text-3xl lg:text-6xl md:w-[60%] mb-10'>Comprehensive Digital Solutions</h1>
-      <p className='text-[16px] w-full md:w-[30%] lg:text-xl  text-white/40 font-bold'>From code to camera, we deliver excellence at every touchpoint</p>
+      <h1 className='text-foreground font-extrabold text-3xl lg:text-6xl md:w-[60%] mb-10'>Comprehensive Digital Solutions</h1>
+      <p className='text-[16px] w-full md:w-[30%] lg:text-xl  text-foreground/50 font-bold'>From code to camera, we deliver excellence at every touchpoint</p>
       </aside>
       <div className={clsx(styles.cards_container , ' mt-10 ')}>
          {cards.map( (card)=>(

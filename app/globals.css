@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@theme{
+  
+   --color-background: rgb(14, 14, 22);
+   --color-main-color:rgb(0, 255, 255);
+   --color-foreground:rgb(255, 255, 255);
+   --color-transition:rgb(7, 20, 61);
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+   --bg-color: rgb(14, 14, 22);
+   --main-color:rgb(0, 255, 255);
+   --text-color:rgb(255, 255, 255);
+   --transition:rgb(14, 27, 39);
 }
 body{
   background-color: #171717;
