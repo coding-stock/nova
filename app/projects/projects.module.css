@@ -1,3 +1,34 @@
 .projects{
     background-color: var(--bg-color);
 }
+.selected{
+    position: relative;
+    color: var(--main-color);
+    transition: color 0.3s ease-in;
+}
+.selected::after{
+    content: "";
+    width: 50%;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+    border-radius: 20px;
+    animation: grow 0.3s ease;
+}
+
+@keyframes grow {
+    from { width: 0;  }
+    to { width: 50%; }
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(min(500px, 100%) , 1fr));
+    align-items: center;
+}
+.image{
+    
+    object-fit: contain;
+}

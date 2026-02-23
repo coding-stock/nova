@@ -75,3 +75,11 @@
         transform: translateY(-40px);
     }
 }
+@media (max-width:420px) {
+    .hero::after{
+        width: 7rem;
+        height: 7rem;
+        filter: blur(20px);
+        border-radius: 50%;
+    }
+}
