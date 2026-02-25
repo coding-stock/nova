@@ -6,6 +6,7 @@
    --color-main-color:rgb(0, 255, 255);
    --color-foreground:rgb(255, 255, 255);
    --color-transition:rgb(7, 20, 61);
+   --breakpoint-md2:500px;
 }
 :root {
    --bg-color: rgb(14, 14, 22);
