@@ -17,19 +17,26 @@
 body{
   background-color: #171717;
 }
+.char{
+  transform: translateY(-130px);
+  transition: transfrom .5;
+  
+}
 .loader {
   width: 50px;
   --b: 8px;
   aspect-ratio: 1;
   border-radius: 50%;
   background:cyan;
-  -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
+  mask: repeating-conic-gradient(#0000 0deg, #000 1deg 70deg, #0000 71deg 90deg),
     radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
   animation: l5 1s infinite;
 }
-
+#nova{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
 @keyframes l5 {
   to {
     transform: rotate(0.5turn);
@@ -40,11 +47,14 @@ body{
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #171717;
+  background:beige;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000000;
+}
+.box{
+  background-color: var(--bg-color);
 }
 @layer utilities {
    .main-color{
