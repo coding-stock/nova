@@ -7,7 +7,7 @@ const spaceGrotest = Space_Grotesk({subsets:['latin'] , weight:['300' , '500' , 
 function Footer() {
 
   return (
-    <footer className={ clsx(styles.footer , ' p-5 h-40 text-white gap-5 flex flex-col justify-center items-center' , spaceGrotest.className) }>
+    <footer className={ clsx(styles.footer , ' p-3 text-white gap-5 flex flex-col justify-center items-center' , spaceGrotest.className) }>
         <div className='flex items-center'>
             <Image src={logo} width={120} height={60} alt='nice'/>
         </div>

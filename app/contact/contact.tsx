@@ -73,7 +73,7 @@ function Contact() {
       y: -100,
       scrollTrigger: {
         trigger: formContainer.current,
-        start: 'top 80%',
+        start: 'top 50%',
         end: 'top 50%',
         scrub: 1,
       }
@@ -81,7 +81,7 @@ function Contact() {
   })
 })
   return (
-     <section className={clsx(spaceGrotesk.className, styles.contact , 'text-color p-6')} >
+     <section id="contact" className={clsx(spaceGrotesk.className, styles.contact , 'text-color p-6')} >
         <div className={styles.box} >
        <div className={ clsx( styles.contact_info ,'bg-sky-800 flex flex-col gap-3')}>
          <h1 className="text-3xl font-bold">Lets create something extraordinary together.</h1>

@@ -34,7 +34,7 @@ function Project() {
     }
   ]
   return (
-    <section className={clsx(styles.projects , ' base-color p-5' , spaceGrotesk.className)}>
+    <section id='project' className={clsx(styles.projects , ' base-color p-5' , spaceGrotesk.className)}>
        <h1 className='text-color text-5xl mb-20'>Our work</h1>
        <div className='text-color font-bold flex text-xl gap-8  overflow-x-auto whitespace-nowrap scrollbar-hide lg:justify-between'>
         <h1 className={clsx( selected === 'web' && styles.selected ,'cursor-pointer p-1.5' )} onClick={()=>{setSelected("web")}}>Website Development</h1>

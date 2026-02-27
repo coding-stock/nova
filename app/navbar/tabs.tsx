@@ -13,6 +13,15 @@ interface TabsProps {
 }
 
 function Tabs({ onClose }: TabsProps) {  
+
+    const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      onClose()
+    }
+  }
+
   return (
     <div className={clsx(styles.tabsContainer, "flex justify-between" , spaceGrotesk.className)}>
       
@@ -20,10 +29,10 @@ function Tabs({ onClose }: TabsProps) {
       initial={{ opacity: 0 , y: 10 }}
       animate={{ opacity: 1, y:0 }}
       transition={{ type:"spring", duration: 0.7 }}>
-      <a href="/">Home</a>
-      <a href="/">Contact</a>
-      <a href="/">About</a>
-      <a href="/">Projects</a>
+      <a onClick={() => scrollToSection('home')} style={{ cursor: 'pointer' }}>Home</a>
+      <a onClick={() => scrollToSection('contact')} style={{ cursor: 'pointer' }}>Contact</a>
+      <a onClick={() => scrollToSection('about')} style={{ cursor: 'pointer' }}>About</a>
+      <a onClick={() => scrollToSection('project')} style={{ cursor: 'pointer' }}>Projects</a>
       </motion.div>
       <motion.div onClick={onClose} className={styles.close}
       initial={{opacity : 0 , y:-40}}

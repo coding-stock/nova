@@ -9,7 +9,7 @@ import { Space_Grotesk } from "next/font/google"
 function About() {
     
   return (
-    <section className={clsx( styles.about, spaceGrotesk.className ,'  text-foreground')}>
+    <section id="about" className={clsx( styles.about, spaceGrotesk.className ,'  text-foreground')}>
         <div className={clsx(styles.image )}>
             <Image src={aboutImage} alt={'about'} />
         </div>
