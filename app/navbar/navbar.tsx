@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../../public/assets/Logo.png'
+import logo from '../../public/assets/nova.png'
 import clsx  from 'clsx'
 import Link from 'next/link'
 import styles from './navbar.module.css'

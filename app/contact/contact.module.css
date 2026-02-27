@@ -1,0 +1,32 @@
+.contact_info{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 1rem;
+    width: 40%;
+    position: relative;
+    z-index: 2;
+}
+.form{
+    position: relative;
+    z-index: 1;
+}
+.box{
+    border: 1px solid rgba(0, 255, 255, 0.482);
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+}
+@media (max-width:900px) {
+    .box{
+        display: block;
+    }
+    .contact_info{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+    .input1{
+        flex-direction: column;
+    }
+}

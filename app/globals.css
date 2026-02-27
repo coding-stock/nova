@@ -48,7 +48,7 @@ body{
 }
 @layer utilities {
    .main-color{
-      color:rgb(0, 255, 255);
+      color:#00ffff;
    }
    .main-background-color{
     background-color: var(--bg-color);
@@ -59,4 +59,17 @@ body{
    .scrollbar-hide{
     scrollbar-width: none;
    }
+}
+.sweetAlert {
+  border: 0.5px solid cyan !important;
+  border-radius: 20px !important;
+}
+
+.sweet_button {
+  width: 300px;
+  padding: 15px 20px !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  color: #000;
+  font-weight: 700;
 }

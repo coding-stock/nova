@@ -39,7 +39,6 @@ function Project() {
        <div className='text-color font-bold flex text-xl gap-8  overflow-x-auto whitespace-nowrap scrollbar-hide lg:justify-between'>
         <h1 className={clsx( selected === 'web' && styles.selected ,'cursor-pointer p-1.5' )} onClick={()=>{setSelected("web")}}>Website Development</h1>
         <h1 className={clsx(selected === 'app' && styles.selected , 'cursor-pointer p-1.5')} onClick={()=>{setSelected("app")}}>App Development</h1>
-        <h1 className={clsx(selected === 'photo' && styles.selected ,'cursor-pointer p-1.5')} onClick={()=>{setSelected("photo")}}>Photography & Videography</h1>
        </div>
       {selected === 'web' && 
        cardsWeb.map((card)=>(
