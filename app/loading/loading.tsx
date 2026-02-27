@@ -12,6 +12,9 @@ export default function Loading() {
   useGSAP(()=>{
     const text = SplitType.create('#nova')
     const timeline = gsap.timeline()
+
+    gsap.set('.char' , { opacity:1})
+    gsap.set('#nova' , {opacity: 1})
      timeline.to('.char' , {
         y:0,
         stagger: 0.05,
@@ -20,7 +23,7 @@ export default function Loading() {
         ease:'power1.inOut'
      })
      timeline.to(box.current, {
-        x:360,
+        x:250,
         borderRadius:"50%",
         duration:1,
      },"<")
@@ -37,7 +40,7 @@ export default function Loading() {
         duration: 1,
         ease:'power1.inOut',
         onComplete: () => setLoading(false)
-     }, "<2")
+     }, "<2.1")
      
   },[])
   
@@ -48,7 +51,7 @@ export default function Loading() {
       {/* <div className="loader"></div> */}
       <div className='relative'>
       <h1 className='text-black text-7xl ' id='nova'>NØVA</h1>
-      <div ref={box} className={clsx('w-10 h-10 font-bold absolute right-80  bottom-5 box')}></div>
+      <div ref={box} className={clsx('w-10 h-10 font-bold absolute right-50  bottom-5 box')}></div>
       </div>
     </div>
     
