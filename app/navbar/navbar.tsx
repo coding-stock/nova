@@ -37,8 +37,8 @@ function Navbar() {
         <div className='w-full  lg:w-3/4'> <h1 className='text-foreground text-4xl md:text-9xl  font-bold'>We Build Digital <span className='text-main-color'>Experiences That Shine.</span></h1></div>
         <div><p className='text-white/50 w-90 md:w-122 text-sm'>Blending technology and visual storytelling to create future-ready digital solutions that elevate your brand to new heights.</p></div>
         <div className='m-5'>
-          <Link href={'/'}><button className='cursor-pointer bg-main-color  p-2 text-foreground font-bold rounded-xl mr-2'>View Our Work</button></Link>
-          <Link href={'/'}><button className='cursor-pointer border-2 border-white/20 p-2 text-foreground  font-bold rounded-xl mr-2'>Start a Project</button></Link>
+          <button onClick={()=> scrollToSection('project')} className='cursor-pointer bg-main-color  p-2 text-foreground font-bold rounded-xl mr-2'>View Our Work</button>
+          <Link href={'/pricing'}><button className='cursor-pointer border-2 border-white/20 p-2 text-foreground  font-bold rounded-xl mr-2'>Our Pricing Plans</button></Link>
         </div>
      </section>
     </header>
