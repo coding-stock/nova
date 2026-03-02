@@ -5,7 +5,57 @@
     padding: 10px;
 }
 .card{
-    width: 100%;
-    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.core{
+    --glow:rgba(0,255,120,0.6)
+}
+.pulse{
+     --glow:rgb(0, 166, 255);
+}
+.nova{
+    --glow:rgb(166, 0, 255);
+}
+.card::after{
+    content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: radial-gradient(
+    circle at top left,
+    var(--glow),
+    transparent 60%
+  );
+  filter: blur(40px);
+  opacity: 0.6;
+  right: 0;
+  z-index: -1;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background:linear-gradient(to bottom , transparent , var(--glow) , transparent);
+    right: 0;
+}
+.popular {
+    width: 150px;
+    height: 35px;
+    position: absolute;
+    top: -10px;        
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 10px;
+}
+.popular::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to left , transparent ,  rgb(0, 166, 255) , transparent);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+
 }
